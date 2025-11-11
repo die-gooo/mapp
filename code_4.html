@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Point of Interest Details</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            font-size: 24px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-gray-800">
+<div class="group/design-root relative mx-auto flex h-[896px] w-full max-w-[414px] flex-col overflow-x-hidden bg-background-light font-display dark:bg-background-dark" style='font-family: "Space Grotesk", "Noto Sans", sans-serif;'>
+<!-- Background Map Image -->
+<div class="absolute inset-0 z-0">
+<img class="h-full w-full object-cover" data-alt="An abstract satellite map of a city with streets and buildings." data-location="Anytown" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSg0Zpjl7phYY8FS97NeLWSFG2DoU_Y3JSQtUrpB67oQMeNil-1mgNZrogsXCA6iTPa2NWevDXyGH2uBkrXF6VN78t3f3XVU4qOGNJjOyUa0UxlZDXvDgS8oRdnmFKa8HVAuRqSqC08aHIQOmFFAqi0fDBqTqbMJqbpxNHpZO4WSUfrH3ygGZgIbZhQ0vIFaEMr229cq23iOk8qGkixmdyR_nlAkT36jQgut549kaSmi0mffHVjgmff6knAndPNxiHYE8xEoL1zDfi"/>
+</div>
+<!-- Bottom Sheet Overlay -->
+<div class="absolute inset-0 z-10 flex flex-col justify-end bg-black/30">
+<div class="flex flex-col rounded-t-xl bg-background-light dark:bg-background-dark">
+<!-- BottomSheetHandle -->
+<div class="flex h-6 w-full items-center justify-center pt-2">
+<div class="h-1 w-9 rounded-full bg-gray-300 dark:bg-gray-600"></div>
+</div>
+<!-- TopAppBar -->
+<div class="flex items-center p-4 pb-2">
+<button class="flex size-12 items-center justify-center rounded-full text-gray-800 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-800">
+<span class="material-symbols-outlined">close</span>
+</button>
+<div class="flex-1"></div>
+<!-- Empty div for spacing -->
+<div class="flex w-12 items-center justify-end">
+<button class="flex size-12 cursor-pointer items-center justify-center overflow-hidden rounded-full text-gray-800 hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-800">
+<span class="material-symbols-outlined">ios_share</span>
+</button>
+</div>
+</div>
+<!-- Header Content -->
+<div class="px-4 pb-4">
+<h1 class="text-3xl font-bold text-gray-900 dark:text-white">The Corner</h1>
+<!-- BodyText -->
+<p class="text-base font-normal leading-normal text-gray-600 dark:text-gray-400">Beer &amp; Sport</p>
+</div>
+<!-- Information Section -->
+<div class="flex flex-col gap-1 px-4">
+<!-- ListItem Address -->
+<div class="flex min-h-14 items-center justify-between gap-4">
+<div class="flex items-center gap-4">
+<div class="flex size-10 shrink-0 items-center justify-center rounded-lg bg-gray-200 text-gray-700 dark:bg-gray-800 dark:text-gray-300">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<p class="flex-1 truncate text-base font-normal leading-normal text-gray-800 dark:text-gray-200">123 Main Street, Anytown</p>
+</div>
+</div>
+<!-- ListItem Hours -->
+<div class="flex min-h-14 items-center justify-between gap-4">
+<div class="flex items-center gap-4">
+<div class="flex size-10 shrink-0 items-center justify-center rounded-lg bg-gray-200 text-gray-700 dark:bg-gray-800 dark:text-gray-300">
+<span class="material-symbols-outlined">schedule</span>
+</div>
+<p class="flex-1 truncate text-base font-normal leading-normal text-gray-800 dark:text-gray-200">Open until 11:00 PM</p>
+</div>
+<div class="shrink-0">
+<p class="text-base font-medium leading-normal text-green-600 dark:text-green-400">Open</p>
+</div>
+</div>
+<!-- ListItem Phone -->
+<div class="flex min-h-14 items-center justify-between gap-4">
+<div class="flex items-center gap-4">
+<div class="flex size-10 shrink-0 items-center justify-center rounded-lg bg-gray-200 text-gray-700 dark:bg-gray-800 dark:text-gray-300">
+<span class="material-symbols-outlined">call</span>
+</div>
+<p class="flex-1 truncate text-base font-normal leading-normal text-gray-800 dark:text-gray-200">(555) 123-4567</p>
+</div>
+</div>
+</div>
+<!-- Action Section -->
+<div class="border-t border-gray-200 bg-background-light px-4 pt-4 pb-6 dark:border-gray-700 dark:bg-background-dark">
+<button class="flex h-12 w-full cursor-pointer items-center justify-center rounded-xl bg-primary text-base font-bold leading-normal text-white">
+                        Show Best Route
+                    </button>
+<div class="mt-4 flex justify-around">
+<button class="flex flex-col items-center gap-1 text-gray-600 dark:text-gray-400">
+<span class="material-symbols-outlined">bookmark_add</span>
+<span class="text-xs font-medium">Save</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-gray-600 dark:text-gray-400">
+<span class="material-symbols-outlined">menu_book</span>
+<span class="text-xs font-medium">Menu</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-gray-600 dark:text-gray-400">
+<span class="material-symbols-outlined">rate_review</span>
+<span class="text-xs font-medium">Review</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Location Tracker UI</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                colors: {
+                    "primary": "#137fec",
+                    "background-light": "#f6f7f8",
+                    "background-dark": "#101922",
+                },
+                fontFamily: {
+                    "display": ["Space Grotesk"]
+                },
+                borderRadius: {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+                },
+            },
+        },
+    }
+    </script>
+<style>
+    .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative mx-auto flex h-screen max-h-[960px] min-h-[600px] w-full max-w-[480px] flex-col overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="A desaturated map view of a city with streets and parks visible." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDV4J71bLy_PtU72pcBb4f8B6lZdQy0laarrna9hyqGYBjnyrPVBdvl1BEdqPaY5SKXD2WBg3E1aC0fOZcDboNNHOFi-nEkMAjxC7o-eHxyjhZn-iptmScHz_YiAAJTaxNU7WGyxgR_P6zNigjjll5Z9qv6y08Aice8Dye_fQkFLgZch4It5bXMcn3QkowMgwLYReTwyuPOK686eBQ-PRbz2HTxI1HQgJMmNathvZAUPACucWc7SGekKKDZH7Oku3xfnwIEUprQiH_5');">
+<div class="absolute" style="top: 35%; left: 45%;">
+<div class="flex flex-col items-center gap-1">
+<div class="flex h-10 w-10 items-center justify-center rounded-full bg-orange-500 text-white shadow-lg ring-2 ring-white dark:ring-background-dark">
+<span class="material-symbols-outlined">museum</span>
+</div>
+<p class="rounded-full bg-black/60 px-2 py-0.5 text-xs text-white backdrop-blur-sm">Art Museum</p>
+</div>
+</div>
+<div class="absolute" style="top: 60%; left: 65%;">
+<div class="flex flex-col items-center gap-1">
+<div class="flex h-10 w-10 items-center justify-center rounded-full bg-violet-600 text-white shadow-lg ring-2 ring-white dark:ring-background-dark">
+<span class="material-symbols-outlined">local_cafe</span>
+</div>
+<p class="rounded-full bg-black/60 px-2 py-0.5 text-xs text-white backdrop-blur-sm">Hipster Cafe</p>
+</div>
+</div>
+<div class="absolute" style="top: 70%; left: 20%;">
+<div class="flex flex-col items-center gap-1">
+<div class="flex h-10 w-10 items-center justify-center rounded-full bg-rose-500 text-white shadow-lg ring-2 ring-white dark:ring-background-dark">
+<span class="material-symbols-outlined">theaters</span>
+</div>
+<p class="rounded-full bg-black/60 px-2 py-0.5 text-xs text-white backdrop-blur-sm">Indie Cinema</p>
+</div>
+</div>
+<div class="absolute" style="top: 50%; left: 50%; transform: translate(-50%, -50%);">
+<div class="relative flex h-6 w-6 items-center justify-center">
+<div class="absolute h-full w-full animate-pulse rounded-full bg-primary/30"></div>
+<div class="h-4 w-4 rounded-full border-2 border-white bg-primary shadow-md"></div>
+</div>
+</div>
+</div>
+<header class="absolute top-0 left-0 right-0 z-10 p-4 pt-6">
+<div class="flex items-center gap-2">
+<div class="relative flex-1">
+<div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4">
+<span class="material-symbols-outlined text-slate-500 dark:text-slate-400">search</span>
+</div>
+<input class="form-input block w-full rounded-full border-none bg-background-light/90 py-3 pl-12 pr-4 text-slate-900 shadow-md placeholder:text-slate-500 focus:ring-2 focus:ring-primary dark:bg-background-dark/90 dark:text-slate-200 dark:placeholder:text-slate-400" placeholder="Search places..." type="search"/>
+</div>
+<button class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-primary text-white shadow-lg">
+<span class="material-symbols-outlined">add_location_alt</span>
+</button>
+</div>
+</header>
+<div class="absolute bottom-4 right-4 z-10 flex flex-col items-end gap-3">
+<div class="flex flex-col items-center gap-2 rounded-full bg-background-light/90 p-2 shadow-md backdrop-blur-sm dark:bg-background-dark/90">
+<button class="flex h-10 w-10 items-center justify-center rounded-full text-slate-800 hover:bg-slate-200 dark:text-slate-200 dark:hover:bg-slate-700">
+<span class="material-symbols-outlined text-xl">layers</span>
+</button>
+<div class="h-px w-8 bg-slate-200 dark:bg-slate-700"></div>
+<button class="flex h-10 w-10 items-center justify-center rounded-full text-slate-800 hover:bg-slate-200 dark:text-slate-200 dark:hover:bg-slate-700">
+<span class="material-symbols-outlined text-xl">my_location</span>
+</button>
+</div>
+</div>
+<div class="absolute bottom-4 left-4 z-10">
+<button class="flex items-center gap-2 rounded-full bg-background-light/90 py-2.5 px-4 text-sm font-medium text-slate-800 shadow-md backdrop-blur-sm dark:bg-background-dark/90 dark:text-slate-200">
+<span class="material-symbols-outlined text-base">radar</span>
+<span>Radius: 5 km</span>
+<span class="material-symbols-outlined text-base">expand_more</span>
+</button>
+</div>
+</div>
+
+</body></html>
