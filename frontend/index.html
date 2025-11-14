@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Geo POI App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Geo POI Viewer</h1>
+  <div id="app">
+    <div id="map"></div>
+  </div>
+
+  <!-- Script principale dell'applicazione -->
+  <script src="app.js"></script>
+
+  <!--
+    Script per caricare la Google Maps JavaScript API.
+    Sostituisci "YOUR_GOOGLE_MAPS_API_KEY" con la tua vera chiave API.
+    Il parametro `callback=initMap` dice all'API di eseguire la funzione `initMap`
+    una volta che lo script è stato caricato e inizializzato.
+  -->
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap">
+  </script>
+</body>
+</html>
